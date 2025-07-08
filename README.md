@@ -4,10 +4,7 @@ git clone https://github.com/soma-okamoto/mycobot-docker.git
 
 cd mycobot-docker
 
-GUIモード起動時の補足：
-RViz2をコンテナ内で表示する場合は、Xサーバー側で以下を実行してください。
 
-xhost +local:root
 
 
 dockerコンテナの作成：
@@ -18,4 +15,8 @@ docker run --rm -it --network host -e DISPLAY=$DISPLAY   -v /tmp/.X11-unix:/tmp/
     source /opt/ros/humble/setup.bash && \
     source /workspace/install/setup.bash && \
     ros2 launch sixdofarm_moveit_config demo.launch.py"
+    
+GUIモード起動時の補足：
+RViz2をコンテナ内で表示する場合は、Xサーバー側で以下を実行してください。
 
+xhost +local:root
