@@ -7,7 +7,8 @@ RViz2をコンテナ内で表示する場合は、Xサーバー側で以下を�
 
 xhost +local:root
 
-
+////////////////////////////////
+dockerコンテナの作成
 docker build -t mycobot-moveit2 .
 
 docker run --rm -it --network host -e DISPLAY=$DISPLAY   -v /tmp/.X11-unix:/tmp/.X11-unix   mycobot-moveit2   bash -lc "\
