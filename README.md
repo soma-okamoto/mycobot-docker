@@ -52,6 +52,8 @@ xhost +local:root
 リポジトリのルートディレクトリで以下を実行します。
 
 ```bash
+cd mycobot-docker
+
 docker build -t mycobot-moveit2 .
 ```
 
