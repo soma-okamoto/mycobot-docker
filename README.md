@@ -1,3 +1,4 @@
+![D.](https://github.com/soma-okamoto/mycobot-docker/blob/main/IMAGES/Screenshot%20from%202025-07-08%2017-04-01.png)
 
 git clone https://github.com/soma-okamoto/mycobot-docker.git
 
