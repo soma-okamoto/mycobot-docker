@@ -1,4 +1,3 @@
-!["代替テキスト"]("IMAGES/Screenshot from 2025-07-08 17-04-01.png# mycobot-docker")
 
 git clone https://github.com/soma-okamoto/mycobot-docker.git
 
