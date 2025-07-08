@@ -1,5 +1,6 @@
 # mycobot-docker
 git clone https://github.com/soma-okamoto/mycobot-docker.git
+
 cd mycobot-docker
 docker build -t mycobot-moveit2 .
 
