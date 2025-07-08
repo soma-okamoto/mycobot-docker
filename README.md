@@ -2,23 +2,6 @@
 
 git clone https://github.com/soma-okamoto/mycobot-docker.git
 
-cd mycobot-docker
-
-docker build -t mycobot-moveit2 .
-
-docker run --rm -it --network host -e DISPLAY=$DISPLAY   -v /tmp/.X11-unix:/tmp/.X11-unix   mycobot-moveit2   bash -lc "\
-    source /opt/ros/humble/setup.bash && \
-    source /workspace/install/setup.bash && \
-    ros2 launch sixdofarm_moveit_config demo.launch.py"
-
-
-
-![D.](https://github.com/soma-okamoto/mycobot-docker/blob/main/IMAGES/Screenshot%20from%202025-07-08%2017-04-01.png)
-
-GUIモード起動時の補足：
-RViz2をコンテナ内で表示する場合は、Xサーバー側で以下を実行してください。
-
-xhost +local:root
 
 # MyCobot MoveIt!2 Docker 環境
 
@@ -104,45 +87,9 @@ docker run -it --rm \
     ros2 launch sixdofarm_moveit_config demo.launch.py"
 ```
 
-## 📦 GitHubへ公開する手順
+![D.](https://github.com/soma-okamoto/mycobot-docker/blob/main/IMAGES/Screenshot%20from%202025-07-08%2017-04-01.png)
 
-1. **リポジトリを初期化**
 
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit: MyCobot MoveIt!2 Docker環境"
-   git remote add origin https://github.com/<USERNAME>/mycobot_moveit_docker.git
-   git push -u origin main
-   ```
-
-2. **.gitignoreの設定例**
-
-   ```gitignore
-   /build/
-   /install/
-   /log/
-   *.pyc
-   __pycache__/
-   .vscode/
-   docker-compose.override.yml
-   ```
-
-3. **README や docs/ の整備**
-
-   * 追加チュートリアルや画像を `docs/` 配下に配置
-   * GitHub PagesやSphinxでドキュメント公開可
-
-## 🖌️ ドキュメント生成／CI設定
-
-* Markdown形式で `docs/` を充実
-* GitHub ActionsでCI（ビルド・テスト）& GitHub Pages自動デプロイ
-
-## 🤝 貢献／改善案募集
-
-* CSVフォーマットやURDFテンプレートの拡張
-* MoveIt!設定の最適化（グループ定義・SRDF調整）
-* CI/CDワークフロー整備
 
 ---
 
