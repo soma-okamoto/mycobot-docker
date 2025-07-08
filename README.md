@@ -1,13 +1,7 @@
 
 git clone https://github.com/soma-okamoto/mycobot-docker.git
 
-
 cd mycobot-docker
-
-
-
-
-dockerコンテナの作成：
 
 docker build -t mycobot-moveit2 .
 
